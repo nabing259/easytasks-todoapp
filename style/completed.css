@@ -1,0 +1,27 @@
+#showtasks table{
+    width: 100%;
+}
+#showtasks th, #showtasks td{
+    text-align: center;
+    padding: 5px;
+}
+#showtasks th{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: darkcyan;
+}
+#showtasks td{
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+#showtasks h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: cornflowerblue;
+    border-radius: 6px;
+}
