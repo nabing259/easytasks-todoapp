@@ -5,6 +5,8 @@ darkMode.addEventListener('click', () => {
 
   const isDarkMode = document.body.classList.contains('darkTheme');
   localStorage.setItem('darkIsOn', isDarkMode);
+  
+  darkMode.innerText = isDarkMode ? "Light Mode" : "Dark Mode";
 });
 
 let applyDarkMode = () => {
@@ -17,8 +19,6 @@ let applyDarkMode = () => {
   }
 }
 applyDarkMode();
-
-
 
 
 
