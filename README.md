@@ -1,2 +1,2 @@
 # easytasks-todoapp
-netlify link : https://64ee77d188a2d75750dde0f0--eclectic-biscotti-2ee7d2.netlify.app/
+netlify link : https://64ef90394c50d36d1c64c9a4--kaleidoscopic-kangaroo-06b465.netlify.app/
