@@ -1,3 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Jost:wght@200;400;500&family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans:wght@200;300;400;500&family=Poppins:wght@600&family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Varela+Round&display=swap');
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding:0 15px;
+    border: 1px solid rgb(51, 177, 255);
+    font-size: 12px;
+    border-radius: 6px;
+}
+.darkTheme #logo{
+    color: white;
+    border: 3px double white;
+    padding: 5px;
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#logo{
+    font-family: 'Varela Round', sans-serif;
+    border: 3px double black;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#darkmode{
+    width: 100px;
+    height: 35px;
+    margin-top: 15px;
+    padding: 2px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.darkTheme #darkmode{
+    background-color: white;
+    color: black;
+    height: 35px;
+    width: 100px;
+}
+.darkTheme #darkmode:hover{
+    background-color: black;
+    color: white;
+}
+#darkmode:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.darkTheme{
+    background-color: rgb(15, 21, 26);
+    color: white;
+}
+.darkTheme #container{
+    background-color: rgb(15, 21, 26);
+    color: white;
+}
+#navbar div{
+    margin-top: 12px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: rgb(51, 177, 255);
+    padding: 10px;
+    margin-right: 10px;    
+}
+#navbar a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: large;
+    color: rgb(3, 118, 80);
+}
+#sort{
+    padding: 5px;
+    border: 1px solid rgb(51, 177, 255);
+    border-radius: 6px;
+}
+#showtasks{
+    margin-top: 35px;
+    border: 1px solid rgb(51, 177, 255);
+    border-radius: 6px;
+    padding: 5px;
+    overflow-y: scroll;
+}
 #showtasks table{
     width: 100%;
 }
@@ -16,7 +106,8 @@
     font-weight: 400;
     font-size: 0.9rem;
 }
-#showtasks h3{
+#showtasks h1
+{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1.5rem;
@@ -24,4 +115,29 @@
     text-align: center;
     background-color: cornflowerblue;
     border-radius: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    #showtasks{
+        width: 100%;
+    }
+    #links{
+        position: absolute;
+        top: 65px;
+    }
+    #sort{
+        padding: 1px;
+        border: 1px solid rgb(51, 177, 255);
+        border-radius: 6px;
+    }
+    #links a{
+        font-size: 12px;
+    }
+    #showtasks{
+        width: 96%;
+        margin: 45px auto;
+    }
 }

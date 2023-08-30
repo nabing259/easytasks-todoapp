@@ -28,7 +28,7 @@
     width: 100px;
     height: 35px;
     margin-top: 15px;
-    padding: 5px;
+    padding: 2px;
     background-color: black;
     color: white;
     border-radius: 5px;
@@ -246,4 +246,69 @@ tbody tr:nth-child(odd) {
     background-color: rgb(255, 255, 255);
     color: rgb(255, 51, 51);
     border: 1px solid rgb(255, 51, 51);
+}
+
+
+@media screen and (max-width: 768px) {
+    body{
+        width: 100%;
+    }
+    #showtasks{
+        width: 100%;
+    }
+    #links{
+        position: absolute;
+        top: 60px;
+    }
+    #sort{
+        padding: 1px;
+        border: 1px solid rgb(51, 177, 255);
+        border-radius: 6px;
+    }
+    #links a{
+        font-size: 12px;
+    }
+    #container{
+        margin: 35px auto 0 auto;
+        flex-direction: column;
+        width: 96%;
+        border: 1px solid rgb(51, 177, 255);
+        border-radius: 6px;
+        padding: 5px;
+        background-color: white;
+        height: 100vh;
+    }
+    #addtasks{
+        width: 90%;
+        margin: 5px auto;
+        padding: 10px;
+        background-color: white;
+        height: 250px;
+    }
+    #showtasks{
+        width: 96%;
+        margin: auto;
+    }
+    #showtasks table{
+        width: 99%;
+    }
+    #showtasks th, #showtasks td{
+        text-align: center;
+        padding: 5px;
+    }
+    #showtasks th{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem;
+        background-color: darkcyan;
+    }
+    #showtasks td{
+        font-family: 'Jost', sans-serif;
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+    #remove{
+        margin-top: 5px;
+    }
+    
 }

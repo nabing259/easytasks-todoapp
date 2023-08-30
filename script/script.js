@@ -45,10 +45,13 @@ function myFunction(){
 
 let todoItems = JSON.parse(localStorage.getItem("todoData"));
 let completed = JSON.parse(localStorage.getItem("markCompleted")) || [];
+const tbody = document.querySelector("tbody");
 
-todoItems.map(function(ele, ind){
+function showTodaItems(todoArray){
+    tbody.innerHTML = "";
+todoArray.map(function(ele, ind){
     let tr = document.createElement("tr");
-
+    // tbody.innerHTML = "";
     tr.innerHTML = `
     <td>${ind+1}</td>
     <td>${ele.Name}</td>
@@ -87,8 +90,9 @@ todoItems.map(function(ele, ind){
         window.location.reload();
     })
 
-    document.querySelector("tbody").append(tr);
+    tbody.append(tr);
 })
+}
 
 function markAsCompleted(ele, ind){
     todoList[ind].Status = "Completed";
@@ -109,5 +113,45 @@ function markAsPending(ele, ind){
 
 
 // Sorting the Tasks
+
+const sort = document.querySelector("#sort");
+
+// function sortTasks(todoArray){
+//     tbody.innerHTML = "";
+//     todoArray.forEach(element => {
+//         const tr = document.createElement("tr");
+//         tr.innerHTML = `
+//         <td>${ind+1}</td>
+//         <td>${element.Name}</td>
+//         <td>${element.Status} </td>
+//         <td>${element.Prior}</td>
+//         `;
+//         tbody.append(tr);
+//     });
+// }
+
+function priority(a, b) {
+    const priorityOrder = { high: 1, medium: 2, low: 3 };
+    return priorityOrder[a.Prior] - priorityOrder[b.Prior];
+  }
+
+sort.addEventListener("change", () => {
+    const value = sort.value;
+    // console.log(value);
+    if(value === "hightolow"){
+        const sortedItems = [...todoItems].sort((a, b) => priority(a, b));
+        showTodaItems(sortedItems);
+    }
+    else if(value === "lowtohigh"){
+        const sortedItems = [...todoItems].sort((a, b) => priority(b, a));
+        showTodaItems(sortedItems);
+    }
+    else {
+        showTodaItems(todoItems);
+    }
+     
+});
+showTodaItems(todoItems);
+// sortTasks(sortedItems);
 
 
